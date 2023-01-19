@@ -20,6 +20,27 @@ const show = (dspS1,dspS2,dspS3,dspBt1,dspBt2) => {
     bt2.style.display = dspBt2;
 } ;
 
+function hide1 () {
+    const bt1 = document.getElementById('bt1');
+    if(bt1.style.display !== 'none') {
+        bt1.style.display = 'none'
+    }
+}
+
+function show1 () {
+    const bt2 = document.getElementById('bt2');
+    if(bt2.style.display !== 'block') {
+        bt2.style.display = 'block'
+    }
+}
+
+function show2 () {
+    const s2 = document.getElementById('s2');
+    if(s2.style.display !== 'block') {
+        s2.style.display = 'block'
+    }
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
     show("none", "none", "none", "block", "none") ;
 });
