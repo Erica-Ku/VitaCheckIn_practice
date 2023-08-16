@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>체중 기록 보기</title>
+</head>
+<body>
+<h1>체중 기록 보기</h1>
+
+<div th:if="${weight != null}">
+    <p>User ID: <span th:text="${weight.userId}"></span></p>
+    <p>Weight: <span th:text="${weight.weight}"></span></p>
+    <p>Height: <span th:text="${weight.height}"></span></p>
+    <p>Date: <span th:text="${weight.date}"></span></p>
+    <p>Time: <span th:text="${weight.time}"></span></p>
+</div>
+
+<a th:href="@{/weight/add}">새로운 체중 기록 추가하기</a>
+</body>
+</html>
